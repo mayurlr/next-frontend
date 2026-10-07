@@ -6,4 +6,4 @@ COPY . .
 RUN npm run build
 
 FROM nginx
-COPY --from=builder /var/www/build /usr/share/nginx/html
+COPY --from=builder /var/www/out /usr/share/nginx/html
